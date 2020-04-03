@@ -1,19 +1,11 @@
 //back end logic
 var toRoboger = function(number) {
   if (number > 0) {
-    var robogers = [];
+    var robogers = "";
     for(i = 0; i <= number; i++) {
-      if (number === 1) {
-        var phrase = "Beep!";
-        robogers.push(phrase);
-        break;
-     
-      } else if (number === 2) {
-        var phrase = "Boop!";
-        robogers.push(phrase);
-        break;
-      }
-      robogers.push(i);
+      var numStr = i.toString();
+      console.log(numStr);
+      
     }
 
     return robogers.join();
