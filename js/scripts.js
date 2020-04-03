@@ -9,12 +9,29 @@ var toRoboger = function(number) {
       var countOf2 = 0;
       var countOf3 = 0;
       for(var e = 0; e <= numStr.length; e++) {
-        
+        if (numStr[e] === "1") {
+          countOf1 = countOf1 + 1;
+        }
+        if (numStr[e] === "2") {
+          countOf2 = countOf2 + 1;
+        }
+        if (numStr[e] === "3") {
+          countOf3 = countOf3 + 1;
+        }
       }
+
+      if (countOf3 > 0) {
+        robogers = "Won't you be my neighbor?";
+      } else if (countOf2 > 0) {
+        robogers = "Boop!";
+      } else if (countOf1 > 0) {
+        robogers = "Beep!";
+      } else {
+        robogers = numStr;
+      }
+      $(".outputRobogers").append("<li>" + robogers + "</li>");
     }
 
-    return robogers.join();
- 
   } else {
     return false;
   }
@@ -28,10 +45,9 @@ $(document).ready(function() {
   $("form#roboger").submit(function(event) {
     event.preventDefault();
     var userNum = parseInt($("#userNum").val());
-    var roboger = toRoboger(userNum);
+    toRoboger(userNum);
 
     $(".numInput").text(userNum);
-    $(".output").text(roboger);
     $("#result").show();
 
   });
