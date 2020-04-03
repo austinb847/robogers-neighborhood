@@ -1,7 +1,16 @@
 //back end logic
 var toRoboger = function(number) {
   if (number > 0) {
-    return true;
+    var robogers = [];
+    for(i = 0; i <= number; i++) {
+      robogers.push(i);
+    }
+
+    return robogers.join();
+ 
+ 
+ 
+ 
   } else {
     return false;
   }
