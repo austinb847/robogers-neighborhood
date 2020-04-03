@@ -7,6 +7,11 @@ var toRoboger = function(number) {
         var phrase = "Beep!";
         robogers.push(phrase);
         break;
+     
+      } else if (number === 2) {
+        var phrase = "Boop!";
+        robogers.push(phrase);
+        break;
       }
       robogers.push(i);
     }
