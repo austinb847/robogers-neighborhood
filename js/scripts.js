@@ -4,8 +4,13 @@ var toRoboger = function(number) {
     var robogers = "";
     for(i = 0; i <= number; i++) {
       var numStr = i.toString();
-      console.log(numStr);
-      
+      //console.log(numStr);
+      var countOf1 = 0;
+      var countOf2 = 0;
+      var countOf3 = 0;
+      for(var e = 0; e <= numStr.length; e++) {
+        
+      }
     }
 
     return robogers.join();
