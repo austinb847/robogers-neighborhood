@@ -33,7 +33,7 @@ var toRoboger = function(number) {
 };
 
 
-//fron end logic
+//front end logic
 $(document).ready(function() {
   $("form#roboger").submit(function(event) {
     event.preventDefault();
@@ -43,10 +43,8 @@ $(document).ready(function() {
       alert("Enter a number please!")
     } else {
       toRoboger(userNum);
+      $("#result").show();
     }
-
-    $(".numInput").text(userNum);
-    $("#result").show();
 
   });
 });
