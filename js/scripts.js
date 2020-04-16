@@ -25,6 +25,7 @@ var toRoboger = function(number) {
 $(document).ready(function() {
   $("form#roboger").submit(function(event) {
     event.preventDefault();
+    $(".outputRobogers").empty();
     var userNum = parseInt($("#userNum").val());
 
     if (isNaN(userNum) || userNum === "") {
